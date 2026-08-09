@@ -1,51 +1,51 @@
 # 2-Stage CMOS Operational Amplifier
 
-**December 2025**
-**Cadence Virtuoso | CMOS Analog Design**
+**December 2025 | Cadence Virtuoso | Analog CMOS Design**
 
-A two-stage CMOS operational amplifier designed and simulated in **Cadence Virtuoso**, focusing on high DC gain, gain-bandwidth, phase margin, slew rate, and frequency stability. Miller compensation with a nulling resistor was incorporated to improve closed-loop stability and frequency response.
+A transistor-level **two-stage CMOS operational amplifier** designed and simulated in **Cadence Virtuoso**, targeting high DC gain, gain-bandwidth, phase margin, and slew rate. The design uses **Miller compensation with a nulling resistor** to improve frequency stability and phase response.
 
 ---
 
 ## 📌 Project Overview
 
-The objective of this project was to design a **two-stage CMOS operational amplifier** capable of providing high voltage gain while maintaining adequate bandwidth and phase margin.
+The objective of this project was to design and analyze a two-stage CMOS op-amp with high voltage gain while maintaining adequate bandwidth and stability.
 
-The op-amp consists of:
+### Key Design Features
 
-* **Differential input stage** for input signal amplification and common-mode rejection
-* **Active current-mirror load** for differential-to-single-ended conversion and increased gain
-* **Second gain stage** for additional voltage amplification
-* **Miller compensation network** for frequency compensation and stability
-* **Nulling resistor** to improve the location of the compensation zero and phase response
-* **Biasing circuitry** to establish appropriate operating currents
+* Differential input stage for voltage amplification and common-mode rejection
+* Active current-mirror load for differential-to-single-ended conversion
+* Second gain stage for additional voltage amplification
+* Miller compensation for frequency stability
+* Nulling resistor for compensation-zero control
+* Biasing circuitry for proper transistor operating points
+* AC and transient simulations for performance evaluation
 
 ---
 
-## 🛠️ Design & Simulation Environment
+## 🛠️ Design & Simulation
 
 | Parameter        | Details                                |
 | ---------------- | -------------------------------------- |
 | **Design Tool**  | Cadence Virtuoso                       |
 | **Design Type**  | Analog CMOS                            |
 | **Architecture** | Two-Stage Operational Amplifier        |
-| **Simulation**   | AC / Transient Analysis                |
 | **Technology**   | CMOS                                   |
+| **Analysis**     | AC & Transient                         |
 | **Compensation** | Miller Compensation + Nulling Resistor |
 
 ---
 
 ## 📐 Circuit Schematic
 
-The complete two-stage CMOS operational amplifier schematic was designed and simulated in Cadence Virtuoso.
+The complete transistor-level two-stage CMOS operational amplifier was designed in Cadence Virtuoso.
 
-![Two Stage Op-Amp Schematic](./images/schematic.png)
+![2-Stage CMOS Op-Amp Schematic](2_stage_opamp_ckt.png)
 
-> **Schematic:** Two-stage CMOS op-amp with differential input stage, current-mirror load, second gain stage, biasing network, and Miller compensation.
+**Circuit includes:** differential input stage, current-mirror load, second gain stage, bias circuitry, and Miller compensation network.
 
 ---
 
-## 📊 Key Performance Specifications
+## 📊 Key Performance Results
 
 | Specification                    |                Achieved Value |
 | -------------------------------- | ----------------------------: |
@@ -59,63 +59,53 @@ The complete two-stage CMOS operational amplifier schematic was designed and sim
 
 ## 📈 AC Analysis
 
-AC analysis was performed to evaluate the **open-loop gain and frequency response** of the operational amplifier.
+AC analysis was performed to evaluate the open-loop frequency response, DC gain, gain-bandwidth product, unity-gain frequency, and phase margin.
 
-The simulation was used to extract:
+### Simulated Response
 
-* DC open-loop gain
-* Gain-bandwidth product
-* Unity-gain frequency
-* Phase margin
-* Frequency response and stability
+![Op-Amp Simulation Response](response.png)
 
-![AC Response](./images/ac_response.png)
+The simulation achieved approximately:
 
-### Observed Response
+* **71 dB DC voltage gain**
+* **11 MHz GBW**
+* **45° phase margin**
 
-The simulated amplifier achieved approximately:
-
-* **71 dB** DC voltage gain
-* **11 MHz** gain-bandwidth product
-* **45°** phase margin
-
-The frequency response demonstrates the effect of Miller compensation in controlling the dominant pole and improving the stability of the amplifier.
+The frequency response demonstrates the effect of Miller compensation in establishing a dominant pole and improving amplifier stability.
 
 ---
 
-## ⚡ Transient / Slew Rate Analysis
+## ⚡ Transient & Slew Rate Analysis
 
-Transient analysis was performed by applying a large-signal input to evaluate the amplifier's large-signal settling behavior and slew-rate limitation.
-
-![Transient Response](./images/transient_response.png)
+Transient analysis was used to evaluate the large-signal response and slew-rate limitation of the amplifier.
 
 The measured slew rate was approximately:
 
-**Slew Rate ≈ 20 V/µs**
+**20 V/µs**
 
-The transient response was used to evaluate the amplifier's ability to respond rapidly to large input-signal transitions.
+This analysis verifies the amplifier's ability to respond to large input-signal transitions while maintaining the desired output response.
 
 ---
 
 ## 🔧 Miller Compensation
 
-A **Miller compensation capacitor** was introduced between the first and second gain stages to improve frequency stability.
+A Miller compensation capacitor was introduced between the first and second gain stages to improve frequency stability.
 
 A **nulling resistor** was incorporated with the compensation capacitor to control the compensation zero and improve the phase response.
 
-The compensation network helps:
+### Compensation Objectives
 
 * Establish a dominant pole
 * Improve phase margin
-* Control the unity-gain frequency
-* Reduce the possibility of instability
-* Improve frequency response
+* Control unity-gain frequency
+* Reduce instability
+* Improve overall frequency response
 
 ---
 
 ## 🔍 Parameter Sensitivity Analysis
 
-The design was further analyzed by varying important circuit parameters and observing their impact on amplifier performance.
+The design was further analyzed by varying key circuit parameters and observing their effect on amplifier performance.
 
 Parameters investigated included:
 
@@ -125,51 +115,43 @@ Parameters investigated included:
 * Load conditions
 * Gain-stage parameters
 
-This analysis helped evaluate the **robustness of the op-amp design** and understand the trade-offs between gain, bandwidth, stability, and slew rate.
+This analysis helped evaluate design robustness and understand the trade-offs between:
+
+**Gain ↔ Bandwidth ↔ Stability ↔ Slew Rate**
 
 ---
 
 ## 🎯 Key Takeaways
 
-* Designed a **two-stage CMOS operational amplifier** from transistor-level circuitry.
+* Designed a **two-stage CMOS operational amplifier** at transistor level.
 * Achieved **71 dB open-loop gain** and **11 MHz GBW**.
 * Obtained **45° phase margin** through frequency compensation.
-* Achieved approximately **20 V/µs slew rate** in transient simulation.
+* Achieved approximately **20 V/µs slew rate**.
 * Implemented **Miller compensation with a nulling resistor**.
-* Studied the effect of circuit parameters on **gain, bandwidth, and stability**.
-* Gained practical experience with **analog CMOS design and Cadence Virtuoso simulation**.
+* Studied parameter sensitivity and its impact on gain, bandwidth, and stability.
+* Gained practical experience in **analog CMOS circuit design and Cadence Virtuoso simulation**.
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Contents
 
 ```text
 Two Stage OpAmp/
 │
 ├── README.md
-├── Schematic/
-│   └── opamp_schematic.png
-│
-├── Simulation/
-│   ├── ac_response.png
-│   └── transient_response.png
-│
-└── Cadence/
-    └── design_files/
+├── 2_stage_opamp_ckt.png
+└── response.png
 ```
-
-> **Note:** Update the image paths above to match the actual filenames and folders in your repository.
 
 ---
 
 ## 🔗 Project Repository
 
-**GitHub:**
-https://github.com/priyaranjanrout/Electronics-Projects/tree/main/Two%20Stage%20OpAmp
+[View the complete project on GitHub](https://github.com/priyaranjanrout/Electronics-Projects/tree/main/Two%20Stage%20OpAmp)
 
 ---
 
-## 👨‍💻 Project Summary
+## 📌 Project Summary
 
 **2-Stage CMOS Operational Amplifier | Cadence Virtuoso | December 2025**
 
