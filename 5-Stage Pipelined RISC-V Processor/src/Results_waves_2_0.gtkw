@@ -1,0 +1,95 @@
+[*]
+[*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
+[*] Wed Aug 12 17:54:46 2026
+[*]
+[dumpfile] "C:\Users\whyon\OneDrive\VLSI\Verilog_riscV\riscV pipeline core\dump.vcd"
+[dumpfile_mtime] "Wed Aug 12 17:11:59 2026"
+[dumpfile_size] 18367
+[savefile] "C:\Users\whyon\OneDrive\VLSI\Verilog_riscV\riscV pipeline core\Results_waves_2_0.gtkw"
+[timestart] 0
+[size] 1920 1033
+[pos] -1 -1
+*-7.416496 11 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[treeopen] tb.dut.
+[treeopen] tb.dut.Decode.control.
+[treeopen] tb.dut.Memory.
+[treeopen] tb.dut.WriteBack.
+[sst_width] 288
+[signals_width] 190
+[sst_expanded] 1
+[sst_vpaned_height] 306
+@800200
+-Global
+@28
+tb.clk
+tb.rst
+@1000200
+-Global
+@800200
+-Fetch
+@28
+tb.dut.Fetch.PCSrcE
+@22
+tb.dut.Fetch.PCTargetE[31:0]
+tb.dut.Fetch.PCD[31:0]
+tb.dut.Fetch.InstrD[31:0]
+tb.dut.Fetch.PCPlus4D[31:0]
+@1000200
+-Fetch
+@800200
+-Decode
+@22
+tb.dut.Decode.PCE[31:0]
+tb.dut.Decode.PCPlus4E[31:0]
+tb.dut.Decode.RD_E[4:0]
+@28
+tb.dut.Decode.ALUControlE[2:0]
+tb.dut.Decode.ALUSrcE
+tb.dut.Decode.BranchE
+tb.dut.Decode.MemWriteE
+tb.dut.Decode.RegWriteE
+tb.dut.Decode.ResultSrcE
+@22
+tb.dut.Decode.RD1_E[31:0]
+tb.dut.Decode.RD2_E[31:0]
+tb.dut.Decode.Imm_Ext_E[31:0]
+@1000200
+-Decode
+@800200
+-Execute
+@22
+tb.dut.Execute.PCPlus4M[31:0]
+tb.dut.Execute.RDM[4:0]
+@28
+tb.dut.Execute.MemWriteM
+tb.dut.Execute.RegWriteM
+tb.dut.Execute.ResultSrcM
+@22
+tb.dut.Execute.ALUResultM[31:0]
+tb.dut.Execute.WriteDataM[31:0]
+@1000200
+-Execute
+@800200
+-Memory
+@22
+tb.dut.Memory.PCPlus4W[31:0]
+@28
+tb.dut.Memory.ResultSrcW
+@22
+tb.dut.Memory.ALUResultW[31:0]
+tb.dut.Memory.ReadDataW[31:0]
+@1000200
+-Memory
+@800200
+-WriteBack
+@28
+tb.dut.Memory.RegWriteW
+@22
+tb.dut.Memory.RDW[4:0]
+@23
+tb.dut.WriteBack.ResultW[31:0]
+@1000200
+-WriteBack
+[pattern_trace] 1
+[pattern_trace] 0
