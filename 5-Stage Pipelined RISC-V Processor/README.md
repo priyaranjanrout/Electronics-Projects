@@ -199,6 +199,11 @@ It illustrates the processor datapath, control logic, pipeline registers, ALU, r
 <p align="center">
   <img src="Schematic.png" alt="5-Stage Pipelined RISC-V Processor Schematic" width="100%">
 </p>
+### Complete Gate Level Netlist
+
+<p align="center">
+  <img src="Complete_gate_level_netlist.png"  width="100%">
+</p>
 
 ---
 
