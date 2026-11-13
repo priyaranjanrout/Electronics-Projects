@@ -114,13 +114,13 @@ A sinusoidal voltage source is configured with an amplitude of 0.9 V and a frequ
 
 The Verilog-A module is represented using a symbol with input and output terminals, allowing it to be instantiated within a test schematic.
 
-![Verilog-A Symbol](SYMBOL.png)
+![Verilog-A Symbol](TEST_SYMBOL.png)
 
 ### 4. Testbench Symbol
 
 The generated symbol is incorporated into the testbench schematic for transient simulation.
 
-![Testbench Symbol](TEST_SYMBOL.png)
+![Testbench Symbol](SYMBOL.png)
 
 ### 5. Verilog-A Code
 
