@@ -120,7 +120,7 @@ The Verilog-A module is represented using a symbol with input and output termina
 
 The generated symbol is incorporated into the testbench schematic for transient simulation.
 
-![Testbench Symbol](TEST_SYMBOL.png)
+![Testbench Symbol](TEST_SYMBOL_.png)
 
 ### 5. Verilog-A Code
 
